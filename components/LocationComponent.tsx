@@ -20,9 +20,6 @@ const LocationComponent: React.FC = () => {
         })();
     },[])
 
-    console.log(location);
-    
-
 
     return(
         <View style={styles.container}>

@@ -7,7 +7,7 @@ import ChatBot from './components/ChatBot';
 export default function App() {
   return (
     <View style={styles.container}>
-      <ChatBot />
+      <LocationComponent />
     </View>
   );
 }

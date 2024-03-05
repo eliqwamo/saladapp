@@ -1,4 +1,6 @@
-const chatSteps = {
+import {ChatStep} from './ChatStep';
+
+const chatSteps: Record<string, ChatStep> = {
     start: {
         message: 'Welcome to our support! How can we help you today?',
         options: [

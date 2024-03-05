@@ -1,6 +1,15 @@
 import { create } from "zustand";
+import {Message} from './ChatStep';
 
-const useChatStore = create((set) => ({
+type ChatState = {
+    messages: Message[];
+    pathHistory: string[];
+    addMessage: (message: Message) => void;
+    setPathHistory: (path: string) => void;
+    popPathHistory: () => void;
+}
+
+const useChatStore = create<ChatState>((set) => ({
     messages: [],
     pathHistory: ['start'],
     addMessage: (message) => set((state) => ({ messages: [...state.messages, message] })),
